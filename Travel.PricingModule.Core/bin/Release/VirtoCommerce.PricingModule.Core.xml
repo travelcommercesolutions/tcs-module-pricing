@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VirtoCommerce.PricingModule.Core</name>
+    </assembly>
+    <members>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.Price.StartDate">
+            <summary>
+            Optional start date for this price, so that we can prepare prices ahead of time.
+            If start date equals now, this price will be active.
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.Price.EndDate">
+            <summary>
+            Optional end date for this price, so that we can prepare prices ahead of time.
+            If end date equals now, this price will not be active.
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.PricingModule.Core.Model.PricelistAssignment">
+            <summary>
+            Used to assign pricelist to specific catalog by using conditional expression 
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.PricelistAssignment.Priority">
+            <summary>
+            If two PricelistAssignments satisfies the conditions and rules, will use one with the greater priority
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.PricelistAssignment.StartDate">
+            <summary>
+            Start of period when Prices Assignment is valid. Null value means no limit
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.PricelistAssignment.EndDate">
+            <summary>
+            End of period when Prices Assignment is valid. Null value means no limit
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.PricelistAssignment.DynamicExpression">
+            <summary>
+            List of conditions and rules to define Prices Assignment is valid
+            </summary>
+        </member>
+        <member name="P:VirtoCommerce.PricingModule.Core.Model.ProductPrice.Prices">
+            <summary>
+            List prices for the products. It includes tiered prices also. (Depending on the quantity, for example)
+            </summary>
+        </member>
+        <member name="T:VirtoCommerce.PricingModule.Core.Services.IPricingDocumentChangesProvider">
+            <summary>
+            Service responsible for providing changes for the prices that are not caused by user changes.
+            </summary>
+        </member>
+        <member name="M:VirtoCommerce.PricingModule.Core.Services.IPricingDocumentChangesProvider.GetCalendarChangesAsync(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Int32,System.Int32)">
+            <summary>
+            Returns all price changes due to date filtering.
+            </summary>
+            <param name="lastEvaluationTimestamp">Last time this evaluation was called. 
+            If this parameter is null, beginning of time will be used.</param>
+            <param name="evaluationTimestamp">Moment to evaluate. If this parameter is null, 
+            current UTC time will be used.</param>
+            <param name="skip">Optional count of price changes to skip for the pagination.</param>
+            <param name="take">Optional count of price changes to take for the pagination.</param>
+            <returns></returns>
+        </member>
+        <member name="T:VirtoCommerce.PricingModule.Data.Services.IPricingPriorityFilterPolicy">
+            <summary>
+            Represents a abstraction for filtering  prices based on business rules.
+            </summary>
+        </member>
+    </members>
+</doc>
