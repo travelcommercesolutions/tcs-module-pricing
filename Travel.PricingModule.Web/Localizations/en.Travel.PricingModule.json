@@ -1,0 +1,24 @@
+{
+  "travel.pricingModule": {
+    "blades": {
+      "hello-world": {
+        "title": "Hello world blade"
+      }
+    },
+    "pricelist-detail": {
+      "title-new": "New Price list",
+      "labels": {
+        "name": "Name",
+        "vendors" : "Vendors",
+        "currency": "Currency",
+        "description": "Description"
+      },
+      "placeholders": {
+        "name": "Enter name",
+        "vendors": "Select...",
+        "currency": "Select...",
+        "description": "Enter description"
+      }
+    }
+  }
+}
