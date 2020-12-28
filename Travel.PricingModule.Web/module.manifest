@@ -2,7 +2,7 @@
 <module>
     <id>TCS.PricingModule</id>
     <version>1.0.1</version>
-    <platformVersion>2.13.52</platformVersion>
+    <platformVersion>2.13.65</platformVersion>
     <dependencies>
         <dependency id="VirtoCommerce.Core" version="2.25.32" />
     </dependencies>
