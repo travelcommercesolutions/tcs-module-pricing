@@ -120,7 +120,7 @@ namespace Travel.PricingModule.Web.Controllers.Api
 		/// Delete pricelists  
 		/// </summary>
 		/// <remarks>Delete pricelists by given array of pricelist ids.</remarks>
-		/// <param name="ids">An array of pricelist ids</param>
+		/// <param name="priceListids">An array of pricelist ids</param>
 		[HttpPost]
 		[Route("deletepricelist")]
 		[CheckPermission(Permission = ModuleConstants.Security.Permissions.Delete)]
